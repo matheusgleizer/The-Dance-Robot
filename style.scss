@@ -1,0 +1,214 @@
+body {
+    overflow: hidden;
+    background-color: aqua;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+    #container {
+        padding-top: 10%;
+        margin: auto;
+        width: 500px;
+        height: 700px;
+
+        #head {
+            margin: auto;
+            width: 250px;
+            height: 200px;
+            background-color: black;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+
+            #face {
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+                padding: 25%;
+                justify-content: space-between;
+
+                #eyes {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+
+                    #left-eye {
+                        width: 30px;
+                        height: 25px;
+                        background-color: white;
+                    }
+
+                    #right-eye {
+                        width: 30px;
+                        height: 25px;
+                        background-color: white;
+                    }
+                }
+
+
+                #mouth {
+                    margin: auto;
+                    margin-top: 40px;
+                    width: 100px;
+                    height: 20px;
+                    background-color: white;
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+                }
+            }
+        }
+
+        #body {
+            margin-top: 40px;
+            width: 100%;
+            height: 45%;
+            border-radius: 2px 2px 20px 20px;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+
+            #arms {
+                width: 100%;
+                height: 50%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                #left-arm {
+                    width: 10%;
+                    height: 100%;
+                    background-color: rgb(42, 138, 248);
+                }
+
+
+                #buttons {
+                    width: 20%;
+                    height: 30%;
+                    margin-top: 20%;
+                    display: grid;
+                    #btn-dance {
+                        height: 100%;
+                        font-size: 20px;
+                        border-radius: 10px;
+                        visibility: visible;
+                        grid-row: 1;
+                    }
+
+                    #btn-stop {
+                        height: 100%;
+                        font-size: 20px;
+                        border-radius: 10px;
+                        visibility: hidden;
+                        grid-row: 2;
+                    }
+                }
+
+                #right-arm {
+                    width: 10%;
+                    height: 100%;
+                    background-color: rgb(42, 138, 248);
+                }
+            }
+
+            #hands {
+                transform: translateX(-10%);
+                width: 100%;
+                height: 15%;
+                display: flex;
+                justify-content: space-between;
+                animation: dance-hands 1s infinite ease-in-out;
+                animation-play-state: paused;
+
+                #right-hand {
+                    width: 10%;
+                    height: 100%;
+                    background-color: rgb(42, 138, 248);
+                }
+
+                #left-hand {
+                    width: 10%;
+                    height: 100%;
+                    background-color: rgb(42, 138, 248);
+                }
+            }
+        }
+
+        #body-bottom {
+            margin: auto;
+            width: 50%;
+            height: 35%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            #legs {
+                width: 100%;
+                height: 80%;
+                display: flex;
+                justify-content: space-between;
+
+                #left-leg {
+                    width: 25%;
+                    height: 100%;
+                    background-color: rgb(42, 138, 248);
+                }
+
+                #right-leg {
+                    width: 25%;
+                    height: 100%;
+                    background-color: rgb(42, 138, 248);
+                }
+            }
+
+            #foots {
+                width: 100%;
+                height: 30%;
+                display: flex;
+                justify-content: space-between;
+                transform: translateX(-25%);
+                animation: dance-foots 1s infinite ease-in-out;
+                animation-play-state: paused;
+
+                #left-foot {
+                    width: 25%;
+                    height: 100%;
+                    background-color: rgb(42, 138, 248);
+                }
+
+                #right-foot {
+                    width: 25%;
+                    height: 100%;
+                    background-color: rgb(42, 138, 248);
+                }
+            }
+        }
+    }
+
+    @keyframes dance-hands {
+        0% {
+            transform: translateX(-10%);
+        }
+
+        50% {
+            transform: translateX(10%);
+        }
+
+        100% {
+            transform: translateX(-10%);
+        }
+    }
+
+    @keyframes dance-foots {
+        0% {
+            transform: translateX(-25%);
+        }
+
+        50% {
+            transform: translateX(25%);
+        }
+
+        100% {
+            transform: translateX(-25%);
+        }
+    }
+}
